@@ -1,43 +1,41 @@
-# Site settings
-title: Solar Energy
-description: A blog for project site on Solar Energy calculation module
-baseurl: "/SolarEnergy/" # the subpath of your site, e.g. /blog
-url: "https://rafburzy.github.io" #
+### your site title here
 
-# User settings
-username: Solar Energy Project Site
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Python based module for PV modules calculations
-#email: anon@anon.com
-twitter_username: rafburzy
-github_username:  rafburzy
-#gplus_username:  lorem_ipsum
-#disqus_username: lorem_ipsum
+title: Solar Energy Python Module
+baseurl: /SolarEnergy/ # name of the repository
+email: your@email.com
 
-# Build settings
-markdown: kramdown
+
+
 highlighter: rouge
-permalink: /:title/
+markdown: kramdown
+### exclude the instructions / write-up in the README.md
 
 
-# html minify
+# Tracker
+analytics:
+
+# Comments
+disqus-shortname:
+
+
+#optimization
+#compress.html
 compress_html:
-  clippings: all
-  comments: all
-  endings: []
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
   profile: false
+  startings: []
 
-# Links to include in menu navigation
-# For external links add external: true
-links:
-  - title: Home
-    url: /
-  - title: Series
-    url: /series
-  - title: Tags
-    url: /tags
-  - title: About Me
-    url: /about
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+sass:
+ style: compressed
+
+exclude:
+- README.md
+
+
+gems: [jekyll-seo-tag, jekyll-paginate]
